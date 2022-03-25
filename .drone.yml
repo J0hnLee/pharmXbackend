@@ -1,5 +1,5 @@
 kind: pipeline
-type: docker
+type: docker # 在 Docker 內部執行管道命令
 name: python3.9
 
 steps:
@@ -11,6 +11,6 @@ steps:
   - pip install --upgrade pip
   - apk update \
   - apk add libpq-dev gcc
-  - pip install -r /requirements.txt
+  #- pip install -r /requirements.txt
   - pip install docker-compose
   - docker-compose run app sh -c "python manage.py test "
