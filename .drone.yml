@@ -8,10 +8,11 @@ steps:
   commands:
   - echo hello
   - echo world
-  - pip install --upgrade pip
-  - pip install --upgrade cffi==1.14.0
   - apk update \
   - apk add libpq-dev gcc
+  - pip install --upgrade pip
+  - pip install --upgrade cffi==1.14.0
+
   #- pip install -r /requirements.txt
   - pip install docker-compose
   - docker-compose run app sh -c "python manage.py test "
