@@ -9,7 +9,7 @@ steps:
   - echo hello
   - echo world
   - apk update \
-  - apk add libpq-dev gcc
+  - apk add libffi libpq-dev gcc
   - pip install --upgrade pip
   - pip install --upgrade cffi==1.14.0
 
