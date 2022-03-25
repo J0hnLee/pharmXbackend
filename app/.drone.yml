@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker
+name: python3.9
+
+steps:
+- name: greeting
+  image: python:3.9.12-alpine
+  commands:
+  - echo hello
+  - echo world
+  - pip install docker-compose
+  - docker-compose run app sh -c "python manage.py test "
