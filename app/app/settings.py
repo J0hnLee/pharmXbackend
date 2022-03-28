@@ -124,3 +124,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'core.User'
+
+ALLOWED_HOSTS = ['192.168.0.109', 'localhost', '127.0.0.1','0.0.0.0']
