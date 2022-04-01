@@ -6,7 +6,8 @@ COPY ./requirements.txt /requirements.txt
 RUN pip install --upgrade pip
 RUN apk update \
     && apk add libpq-dev gcc
-
+# install GEO package
+RUN apk add gdal geos  
 RUN pip install -r /requirements.txt
 
 # create a directory for the app in the container.
